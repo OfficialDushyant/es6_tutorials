@@ -1,4 +1,4 @@
 node_modules/
 styles/css/
 npm-debug.log
-dist/
+app/.dist/

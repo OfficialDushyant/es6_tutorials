@@ -30,17 +30,17 @@ gulp.task('mincss', () => {
 gulp.task('browserSync', () => {
   browserSync.init({
     server: {
-      baseDir: 'app'
+      baseDir: './app'
     },
   });
   gulp.watch("app/**/*.html").on('change', browserSync.reload);
-  gulp.watch("app/**/*.js").on('change', browserSync.reload);
+  gulp.watch("app/.dist/**/*.js").on('change', browserSync.reload);
   gulp.watch("app/**/*.scss").on('change', browserSync.reload);
 });
 
 //Babel transpiler
 gulp.task('composeJS', () =>
-    gulp.src('app/**/*.js')
+    gulp.src(['app/**/*.js', '!app/.dist/**'])
         .pipe(sourcemaps.init())
         .pipe(babel({
             plugins: ['@babel/transform-runtime'],
@@ -48,7 +48,7 @@ gulp.task('composeJS', () =>
         }))
         .pipe(concat('app.js'))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./app/.dist'))
 );
 
 //Gulp watch
