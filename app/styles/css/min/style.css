@@ -1,0 +1,5 @@
+body,ul,ol{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}.image{float:left;color:#000}@media(max-width:767px){.image{color:#0f8}
+}@media(min-width:768px) and (max-width:991px){.image{color:#f80}}@media(min-width:768px) and (max-width:991px){.image{color:#8f0}
+}

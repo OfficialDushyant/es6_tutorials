@@ -1,0 +1,15 @@
+@import "../variables";
+@mixin respond-to($media) {
+    @if $media == xs {
+		@media (max-width: $xs-max) { @content; }
+	}
+	@else if $media == sm {
+		@media (min-width: $sm-min) and (max-width: $sm-max) { @content; }
+	}
+	@else if $media == md {
+		@media (min-width: $md-min) and (max-width: $md-max) { @content; }
+	}
+	@else if $media == lg {
+		@media (min-width: $lg-min) { @content; }
+	}
+}

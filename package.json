@@ -1,0 +1,23 @@
+{
+  "name": "es6tuts",
+  "version": "1.0.0",
+  "description": "Tutorials for es6",
+  "private": true,
+  "main": "./app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve-dev":"gulp watch"
+  },
+  "author": "Dushynat",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0-beta.2"
+  },
+  "dependencies": {
+    "gulp-uglifycss": "^1.0.9"
+  }
+}

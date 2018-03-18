@@ -1,0 +1,17 @@
+@import "reset";
+@import "variables";
+@import "mixins/respond-to";
+
+.image {
+  float: left;
+  color: #000;
+  @include respond-to(xs) {
+    color:#0f8;
+  }
+  @include respond-to(sm) {
+    color: #f80;
+  }
+  @include respond-to(sm) {
+    color: #8f0;
+  }
+}

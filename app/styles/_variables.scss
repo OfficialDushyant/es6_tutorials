@@ -1,0 +1,19 @@
+// Variables
+// ---------
+
+// Extra small screen / phone
+$xs-min: 480px;
+
+// Small screen / tablet
+$sm-min: 768px;
+
+// Medium screen / desktop
+$md-min: 992px;
+
+// Large screen / wide desktop
+$lg-min: 1200px;
+
+// So media queries don't overlap when required, provide a maximum
+$xs-max: ($sm-min - 1);
+$sm-max: ($md-min - 1);
+$md-max: ($lg-min - 1);
