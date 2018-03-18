@@ -46,14 +46,14 @@ gulp.task('composeJS', () =>
             plugins: ['@babel/transform-runtime'],
             presets: ['@babel/env']
         }))
-        .pipe(concat('all.js'))
+        .pipe(concat('app.js'))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('./dist'))
 );
 
 //Gulp watch
 gulp.task('watch',['browserSync'] ,() => {
-  guulp.watch('app/**/*.js', ['composeJS'])
+  gulp.watch('app/**/*.js', ['composeJS'])
   gulp.watch('app/styles/**/*.scss', ['sass']);
   gulp.watch('app/styles/css/*.css', ['mincss']);
 });
